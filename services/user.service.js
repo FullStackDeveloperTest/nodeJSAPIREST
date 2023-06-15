@@ -19,7 +19,6 @@ exports.create = async (userData) => {
       age: userData.age,
     };
 
-    console.log("ALSO WORKING");
     // Save User in the database
     return await User.create(user);
   } catch (err) {
