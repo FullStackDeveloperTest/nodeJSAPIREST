@@ -47,12 +47,12 @@ This application uses a database. Make sure to configure the database connection
 
 Run the server in development mode with automatic restart on code changes:
 
-    ```bash
+    ``bash
     npm run dev
 
 ## Run the test suite:
 
-    ```bash
+    ``bash
     npm test
 
 Contributions are welcome! Please follow the guidelines in CONTRIBUTING.md for more information.
