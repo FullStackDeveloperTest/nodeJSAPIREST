@@ -15,42 +15,46 @@ This is a simple CRUD API application made with Express and documented with Swag
 
    ```bash
    git clone <repository-url>
-Install the dependencies:
 
-bash
-cd <project-folder>
-npm install
-Usage
-Start the server:
+2. Install the dependencies:
 
-bash
-npm start
+   ```bash
+    cd <project-folder>
+    npm install
 
-Access the Swagger documentation:
+3. Start the server:
+
+    ```bash
+    npm start
+
+4. Access the Swagger documentation:
 
 Open your web browser and visit http://localhost:8080/api-docs to view the Swagger UI.
 
-API Routes
+## API Routes
+
 /api/users: CRUD operations for managing users.
-Configuration
+
+## Configuration
+
 The server runs on port 8080 by default. You can change it by modifying the PORT variable in the .env file.
-Database
+
+## Database
+
 This application uses a database. Make sure to configure the database connection in the .env file.
-Development
+
+## Development
+
 Run the server in development mode with automatic restart on code changes:
 
-bash
-npm run dev
-Testing
-Run the test suite:
+    ```bash
+    npm run dev
 
-bash
-npm test
+## Run the test suite:
+
+    ```bash
+    npm test
 
 Contributions are welcome! Please follow the guidelines in CONTRIBUTING.md for more information.
-
-License
-This project is licensed under the MIT License.
-
 
 Feel free to customize the content according to your specific project requirements.
