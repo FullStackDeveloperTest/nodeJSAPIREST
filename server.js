@@ -2,8 +2,39 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 const app = express();
-
+const swaggerJSDoc = require('swagger-jsdoc');
+const swaggerUi = require('swagger-ui-express');
 const db = require("./models");
+
+const options = {
+  definition: {
+    openapi: "3.1.0",
+    info: {
+      title: "FullStackTest Express API with Swagger",
+      version: "0.1.0",
+      description:
+        "This is a simple CRUD API application made with Express and documented with Swagger",
+      contact: {
+        name: "FullStackTest",
+        email: "ernestbast@gmail.com",
+      },
+    },
+    servers: [
+      {
+        url: "http://localhost:8080",
+      },
+    ],
+  },
+  apis: ["./routes/*.js"],
+};
+
+const specs = swaggerJSDoc(options);
+app.use(
+  "/api-docs",
+  swaggerUi.serve,
+  swaggerUi.setup(specs)
+);
+
 db.sequelize.sync()
   .then(() => {
     console.log("Synced db.");
@@ -14,7 +45,7 @@ db.sequelize.sync()
 
 
 var corsOptions = {
-  origin: "http://localhost:4200",
+  origin: "*",
 };
 
 app.use(cors(corsOptions));
