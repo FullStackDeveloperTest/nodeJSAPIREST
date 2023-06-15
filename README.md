@@ -47,15 +47,12 @@ This application uses a database. Make sure to configure the database connection
 
 Run the server in development mode with automatic restart on code changes:
 
-    ```
     npm run dev
-    ```
 
 ## Run the test suite:
 
-    ```
     npm test
-    ```  
+ 
 Contributions are welcome! Please follow the guidelines in CONTRIBUTING.md for more information.
 
 Feel free to customize the content according to your specific project requirements.
